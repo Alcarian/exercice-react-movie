@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "font1";
+  src: url(/public/assets/fonts/Dongle-Light.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  color: rgb(245, 229, 229);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "font1", sans-serif;
+  background: rgb(44, 44, 121);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (max-width: 590px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.navigation .link {
+  margin: 0 15px;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  align-items: center;
+}
+@media screen and (max-width: 930px) {
+  .navigation .link {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .navigation .link {
+    position: inherit;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+  }
+}
+.navigation div {
+  display: flex;
+  justify-content: center;
+}
+.navigation div a {
+  padding: 5px;
+  margin-right: 5px;
+}
+.navigation div a:hover {
+  transition: 0.6s;
+  transform: scale(1.1);
+}
+.navigation div a button {
+  color: rgb(245, 229, 229);
+  font-size: 1.1rem;
+  background: rgb(44, 44, 121);
+  border: none;
+  border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+@media screen and (max-width: 930px) {
+  .navigation div a button {
+    font-size: 0.8rem;
+  }
+}
+.navigation div .nav-active {
+  position: relative;
+}
+.navigation div .nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background: rgb(39, 136, 226);
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@-webkit-keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+.navigation .title {
+  color: rgb(245, 229, 229);
+  font-size: 1.7rem;
+  text-shadow: 5px 5px 2px rgb(105, 105, 105);
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 930px) {
+  .navigation .title {
+    font-size: 1.3rem;
+  }
+}
+
+.card {
+  height: auto;
+  width: 300px;
+  background: rgb(9, 9, 49);
+  border-radius: 30px;
+  margin: 10px;
+  position: relative;
+}
+.card img {
+  margin: 10px;
+  height: 300px;
+  width: 200px;
+  border-radius: 40px;
+}
+.card h2 {
+  color: rgb(245, 229, 229);
+}
+.card span, .card p {
+  color: rgb(105, 105, 105);
+  font-size: 1.2rem;
+}
+.card i {
+  color: yellow;
+  font-size: 1rem;
+}
+.card p {
+  margin: 8px 8px 50px 8px;
+}
+.card button {
+  padding: 10px;
+  background: rgb(39, 136, 226);
+  color: rgb(245, 229, 229);
+  border-radius: 15px;
+  bottom: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+.card button:hover {
+  transition: 0.6s;
+  transform: scale(1.1);
+}
+.card .gender {
+  display: flex;
+}
+.card .gender li {
+  background: rgb(44, 44, 121);
+  margin: 0 5px;
+  border-radius: 10px;
+  color: rgb(245, 229, 229);
+  font-size: 1rem;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+}
+.search form input {
+  width: 200px;
+  background: rgb(245, 229, 229);
+  padding: 8px;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  resize: none;
+  text-align: center;
+}
+.search button[type=submit] {
+  border: none;
+  width: 200px;
+  padding: 8px;
+  text-align: center;
+  background: rgb(39, 136, 226);
+  color: rgb(245, 229, 229);
+  border-radius: 0 0 5px 5px;
+}
+
+.movies-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movies-card li {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+.top i {
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  border: 1px solid rgb(245, 229, 229);
+  border-radius: 50px;
+  color: rgb(245, 229, 229);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgb(245, 229, 229);
+}
+@media screen and (max-width: 930px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.result li {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */

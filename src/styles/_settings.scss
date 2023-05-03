@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "font1";
+    src: url(/public/assets/fonts/Dongle-Light.ttf);
+}
+
+$font-1: "font1", sans-serif;
+
+$color-bg: rgb(44, 44, 121);
+$color-card: rgb(9, 9, 49);
+$color-button: rgb(39, 136, 226);
+$color-infos: rgb(105, 105, 105);
+$color-white: rgb(245, 229, 229);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+  color: $color-white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-1;
+    background: $color-bg;
+}
